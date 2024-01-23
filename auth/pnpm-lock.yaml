@@ -1019,6 +1019,13 @@ packages:
       helmet: 7.1.0
     dev: false
 
+  /@types/helmet@4.0.0:
+    resolution: {integrity: sha512-ONIn/nSNQA57yRge3oaMQESef/6QhoeX7llWeDli0UZIfz8TQMkfNPTXA8VnnyeA1WUjG2pGqdjEIueYonMdfQ==}
+    deprecated: This is a stub types definition. helmet provides its own type definitions, so you do not need this installed.
+    dependencies:
+      helmet: 7.1.0
+    dev: false
+
   /@types/http-errors@2.0.4:
     resolution:
       {
