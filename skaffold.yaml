@@ -24,3 +24,11 @@ build:
         manual:
           - src: "**/*.{ts,js,tsx,jsx,css,scss}"
             dest: .
+    - image: samoz93/tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.{ts,js,tsx,jsx,css,scss}"
+            dest: .
