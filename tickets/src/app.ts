@@ -16,6 +16,10 @@ import "express-async-errors";
 import { CONFIG } from "./config";
 import { createTicketRouter, getTicketsRouter } from "./routes";
 import { passwordManager } from "./utils";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
 const routes: any[] = [createTicketRouter, getTicketsRouter];
 
 const middleWares: RequestHandler[] = [

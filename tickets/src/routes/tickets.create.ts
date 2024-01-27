@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   AuthErrors,
   EventsType,
@@ -11,6 +12,16 @@ import { NatsWrapper } from "../nat.wrapper";
 import { createTicket, getTicketById, updateTicket } from "../services";
 const router = Router();
 const basicValidation = [
+=======
+import { needsAuth, validateRequest } from "@samoznew/common";
+import { Router } from "express";
+import { body } from "express-validator";
+import { createTicket } from "../services";
+const router = Router();
+
+router.post(
+  "",
+>>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
   needsAuth,
   ...[
     body("title").not().isEmpty().withMessage("Title is required"),
@@ -19,6 +30,7 @@ const basicValidation = [
       .withMessage("Price must be greater than 0"),
   ],
   validateRequest,
+<<<<<<< HEAD
 ];
 
 router.post("/", ...basicValidation, async (req, res) => {
@@ -55,5 +67,18 @@ router.put("/:id", ...basicValidation, async (req, res) => {
 
   res.status(200).json({ data: ticket });
 });
+=======
+  async (req, res) => {
+    const { title, price } = req.body;
+    const ticket = await createTicket({
+      title,
+      price,
+      userId: req.user!.id,
+    });
+
+    res.status(201).json({ data: ticket });
+  }
+);
+>>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
 
 export { router as createTicketRouter };

@@ -6,7 +6,11 @@ describe("Signup route", () => {
     price: 100,
   };
 
+<<<<<<< HEAD
   it("We are able to get ticket information", async () => {
+=======
+  it("we are able to reach api/tickets", async () => {
+>>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
     const res = await request(app)
       .post("/api/tickets")
       .set("Cookie", signin())

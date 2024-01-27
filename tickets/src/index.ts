@@ -2,12 +2,15 @@ import to from "await-to-js";
 import mongoose from "mongoose";
 import { app } from "./app";
 import { CONFIG } from "./config";
+<<<<<<< HEAD
 import {
   TicketCreateSubject,
   TicketPublisher,
   TicketUpdateSubject,
 } from "./events";
 import { NatsWrapper } from "./nat.wrapper";
+=======
+>>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
 
 const init = async () => {
   const [err] = await to(mongoose.connect(CONFIG.MONGO_URI));
@@ -16,6 +19,7 @@ const init = async () => {
     return;
   }
 
+<<<<<<< HEAD
   const nc = await NatsWrapper.getInstance().connect();
 
   const publisher = new TicketPublisher(nc);
@@ -53,6 +57,10 @@ const init = async () => {
   }
   app.listen(CONFIG.PORT, () => {
     console.log("Listening on port " + CONFIG.PORT + CONFIG.natsClient);
+=======
+  app.listen(CONFIG.PORT, () => {
+    console.log("Listening on port " + CONFIG.PORT);
+>>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
   });
 };
 

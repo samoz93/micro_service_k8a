@@ -3,7 +3,11 @@ import mongoose from "mongoose";
 import { passwordManager } from "../src/utils";
 
 declare global {
+<<<<<<< HEAD
   function signin(idx?: number): string[];
+=======
+  function signin(): string[];
+>>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
 }
 
 let mongo: MongoMemoryServer;
@@ -24,6 +28,7 @@ beforeEach(async () => {
 });
 
 afterAll(async () => {
+<<<<<<< HEAD
   await mongo?.stop();
   await mongoose?.connection?.close();
 });
@@ -35,6 +40,15 @@ const users = [
 global.signin = (idx: number = 0): string[] => {
   const user = users[idx];
   const jwt = passwordManager.generateJWT(user);
+=======
+  await mongo.stop();
+  await mongoose.connection.close();
+});
+
+global.signin = (): string[] => {
+  const email = "test@test.com";
+  const jwt = passwordManager.generateJWT({ email, id: "123" });
+>>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
   const cookie = `session=${Buffer.from(JSON.stringify({ jwt })).toString(
     "base64"
   )};`;

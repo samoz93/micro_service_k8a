@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "jest --watchAll=false --no-cache",
+=======
+    "test": "jest --watchAll --no-cache",
+>>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
     "start": "ts-node-dev src/index.ts"
   },
   "jest": {
@@ -18,7 +22,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "@samoznew/common": "^1.0.11",
+=======
+    "@samoznew/common": "^1.0.7",
+>>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
     "@types/cookie-session": "^2.0.48",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
@@ -37,7 +45,10 @@
     "jsonwebtoken": "^9.0.2",
     "lodash": "^4.17.21",
     "mongoose": "^8.1.0",
+<<<<<<< HEAD
     "nats": "^2.19.0",
+=======
+>>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
     "nodemon": "^3.0.3",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.3"

@@ -25,10 +25,13 @@ spec:
               value: "mongodb://tickets-mongo-s:27017/tickets"
             - name: PORT
               value: "3012"
+<<<<<<< HEAD
             - name: NATS_CLIENT_ID
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.name
+=======
+>>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
 ---
 apiVersion: v1
 kind: Service

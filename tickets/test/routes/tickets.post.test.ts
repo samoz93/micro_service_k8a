@@ -1,5 +1,6 @@
 import request from "supertest";
 import { app } from "../../src/app";
+<<<<<<< HEAD
 import { NatsWrapper } from "../../src/nat.wrapper";
 describe("Signup route", () => {
   beforeAll(async () => {
@@ -7,6 +8,9 @@ describe("Signup route", () => {
     jest.spyOn(NatsWrapper.getInstance(), "getSubject");
   });
 
+=======
+describe("Signup route", () => {
+>>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
   it("we are able to reach api/tickets", async () => {
     const res = await request(app).post("/api/tickets").send({});
     expect(res.status).not.toEqual(404);
@@ -22,7 +26,10 @@ describe("Signup route", () => {
       .post("/api/tickets")
       .set("Cookie", signin())
       .send({});
+<<<<<<< HEAD
 
+=======
+>>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
     expect(res.status).not.toEqual(401);
   });
 
@@ -80,6 +87,7 @@ describe("Signup route", () => {
     expect(res.body.data.title).toEqual("asdadsas");
     expect(res.body.data.price).toEqual(100);
     expect(res.body.data).toHaveProperty("id");
+<<<<<<< HEAD
     expect(NatsWrapper.getInstance).toHaveBeenCalled();
     expect(NatsWrapper.getInstance().getSubject).toHaveBeenCalled();
   });
@@ -129,5 +137,7 @@ describe("Signup route", () => {
 
     expect(data.body.error).toBeDefined();
     expect(data.status).toEqual(401);
+=======
+>>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
   });
 });
