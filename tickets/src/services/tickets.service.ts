@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { DBError, _, to } from "@samoznew/common";
 =======
 import { DBError, to } from "@samoznew/common";
 >>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
+=======
+import { DBError, _, to } from "@samoznew/common";
+>>>>>>> 7ee7d11 (Add new files and update existing files)
 import { ITicket, TicketModel } from "../models/tickets.model";
 
 export const createTicket = async (ticket: ITicket) => {
@@ -14,6 +18,9 @@ export const createTicket = async (ticket: ITicket) => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7ee7d11 (Add new files and update existing files)
 export const updateTicket = async (id: string, ticket: ITicket) => {
   let [err, data] = await to(TicketModel.findById(id));
   if (err) {
@@ -33,8 +40,11 @@ export const updateTicket = async (id: string, ticket: ITicket) => {
   return data;
 };
 
+<<<<<<< HEAD
 =======
 >>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
+=======
+>>>>>>> 7ee7d11 (Add new files and update existing files)
 export const getTickets = async () => {
   const [err, data] = await to(TicketModel.find({}).exec());
   if (err) {

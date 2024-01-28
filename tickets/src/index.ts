@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import { app } from "./app";
 import { CONFIG } from "./config";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   TicketCreateSubject,
   TicketPublisher,
@@ -11,6 +12,9 @@ import {
 import { NatsWrapper } from "./nat.wrapper";
 =======
 >>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
+=======
+import { setupNats } from "./nat.setup";
+>>>>>>> 7ee7d11 (Add new files and update existing files)
 
 const init = async () => {
   const [err] = await to(mongoose.connect(CONFIG.MONGO_URI));
@@ -19,6 +23,7 @@ const init = async () => {
     return;
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const nc = await NatsWrapper.getInstance().connect();
 
@@ -58,6 +63,10 @@ const init = async () => {
   app.listen(CONFIG.PORT, () => {
     console.log("Listening on port " + CONFIG.PORT + CONFIG.natsClient);
 =======
+=======
+  await setupNats();
+
+>>>>>>> 7ee7d11 (Add new files and update existing files)
   app.listen(CONFIG.PORT, () => {
     console.log("Listening on port " + CONFIG.PORT);
 >>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)

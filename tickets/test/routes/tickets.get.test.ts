@@ -7,10 +7,14 @@ describe("Signup route", () => {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   it("We are able to get ticket information", async () => {
 =======
   it("we are able to reach api/tickets", async () => {
 >>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
+=======
+  it("We are able to get ticket information", async () => {
+>>>>>>> 7ee7d11 (Add new files and update existing files)
     const res = await request(app)
       .post("/api/tickets")
       .set("Cookie", signin())

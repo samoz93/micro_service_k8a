@@ -17,9 +17,12 @@ import { CONFIG } from "./config";
 import { createTicketRouter, getTicketsRouter } from "./routes";
 import { passwordManager } from "./utils";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
+=======
+>>>>>>> 7ee7d11 (Add new files and update existing files)
 const routes: any[] = [createTicketRouter, getTicketsRouter];
 
 const middleWares: RequestHandler[] = [

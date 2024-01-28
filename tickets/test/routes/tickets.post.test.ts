@@ -140,4 +140,53 @@ describe("Signup route", () => {
 =======
 >>>>>>> 89871aa (Add Dockerfile and .dockerignore for tickets service)
   });
+
+  it("Been able to update a ticket", async () => {
+    const res = await request(app)
+      .post("/api/tickets")
+      .set("Cookie", signin())
+      .send({
+        title: "asdadsas",
+        price: 100,
+      });
+
+    expect(res.status).toEqual(201);
+
+    const updatedTicket = await request(app)
+      .put(`/api/tickets/${res.body.data.id}`)
+      .set("Cookie", signin())
+      .send({
+        title: "newTitle",
+        price: 200,
+      });
+
+    console.log("updatedTicket", updatedTicket.body.data);
+
+    expect(updatedTicket.body.data.title).toEqual("newTitle");
+    expect(updatedTicket.body.data.price).toEqual(200);
+    expect(updatedTicket.body.data.id).toEqual(res.body.data.id);
+  });
+
+  it("Can't update a value if not the owner", async () => {
+    const res = await request(app)
+      .post("/api/tickets")
+      .set("Cookie", signin())
+      .send({
+        title: "asdadsas",
+        price: 100,
+      });
+
+    expect(res.status).toEqual(201);
+
+    const data = await request(app)
+      .put(`/api/tickets/${res.body.data.id}`)
+      .set("Cookie", signin(1))
+      .send({
+        title: "newTitle",
+        price: 200,
+      });
+
+    expect(data.body.error).toBeDefined();
+    expect(data.status).toEqual(401);
+  });
 });
