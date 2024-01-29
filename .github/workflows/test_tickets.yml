@@ -1,4 +1,4 @@
-name: tests
+name: test-tickets
 
 on:
   pull_request:
@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: yarn global add pnpm && pnpm install -r --no-frozen-lockfile && npm run test
+      - run: yarn global add pnpm && cd tickets && pnpm install --frozen-lockfile && npm run test
