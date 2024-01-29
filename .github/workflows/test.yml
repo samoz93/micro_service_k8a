@@ -2,8 +2,11 @@ name: tests
 
 on:
   pull_request:
-    types: [opened, reopened]
-    branches: [**]
+    types: 
+      - opened
+      - reopened
+    branches:
+      - **
 
 jobs:
   build:
