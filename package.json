@@ -9,11 +9,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "workspaces": [
-    "auth",
-    "tickets",
-    "client",
-    "common"
-  ]
+  "license": "ISC"
 }
