@@ -2,11 +2,11 @@ name: tests
 
 on:
   pull_request:
-    types: 
+    types:
       - opened
       - reopened
     branches:
-      - **
+      - /**
 
 jobs:
   build:
