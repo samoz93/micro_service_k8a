@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@samoznew/common':
     specifier: ^1.0.11
-    version: 1.0.11
+    version: link:../shared
   '@types/cookie-session':
     specifier: ^2.0.48
     version: 2.0.48
@@ -650,16 +650,6 @@ packages:
     resolution: {integrity: sha512-8zJ8N1x51xo9hwPh6AWnKdLGEC5N3lDa6kms1YHmFBoRhTpJR6HG8wWk0td1MVCu9cD4YBrvjZEtd5Obw0Fbnw==}
     dependencies:
       sparse-bitfield: 3.0.3
-
-  /@samoznew/common@1.0.11:
-    resolution: {integrity: sha512-np8+gruOhKhdQ4hh6SkKCNZgYEdLgnvOfMh+JMidQkThyEX0UtalFmEeX0p8iDS0DKkOYCZiTjtnoueje3aXyw==}
-    dependencies:
-      await-to-js: 3.0.0
-      express-validator: 7.0.1
-      jsonwebtoken: 9.0.2
-      lodash: 4.17.21
-      nats: 2.19.0
-    dev: false
 
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
