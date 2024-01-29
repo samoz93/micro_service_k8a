@@ -2,7 +2,7 @@ import { Router } from "express";
 import { getTicketById, getTickets } from "../services";
 const router = Router();
 
-router.get("", async (req, res) => {
+router.get("/", async (req, res) => {
   const tickets = await getTickets();
   res.status(200).json({ data: tickets });
 });
