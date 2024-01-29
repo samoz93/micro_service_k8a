@@ -4,7 +4,6 @@
   "description": "Ticketing selling app",
   "type": "module",
   "scripts": {
-    "test": "cd auth && npm run test && cd ../tickets && npm run test && cd ../",
     "dev": "skaffold dev"
   },
   "keywords": [],
